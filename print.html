@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/cardstyle.css" />
+    <link rel="stylesheet" href="styles/boardstyles.css" />
+    <script src="cards.js" type="text/javascript"></script>
+    <script src="/scripts/print.js" type="text/javascript" defer></script>
+    <link
+      rel="icon"
+      href="/assets/favicon_white.png"
+      media="(prefers-color-scheme:dark)"
+    />
+    <link
+      rel="icon"
+      href="/assets/favicon_black.png"
+      media="(prefers-color-scheme:light)"
+    />
+    <title>Print</title>
+    <style>
+      :root {
+        --scale: 2.1;
+      }
+
+      body {
+        background-color: white;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: auto;
+        max-height: auto;
+        justify-content: center;
+      }
+
+      .container > * {
+        margin-top: 2.508rem;
+        margin-bottom: 2.508rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container" id="container"></div>
+    </main>
+  </body>
+</html>

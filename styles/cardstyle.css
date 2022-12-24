@@ -1,0 +1,380 @@
+:root {
+  --blue-color: #4a5d73;
+  --green-color: #4c733e;
+  --purple-color: #734a69;
+  --red-color: #9c5252;
+
+  --Assertion-color: #f57f7f;
+  --Aura-color: #fffc78;
+  --Ability-color: #f57fd4;
+
+  --scale: 1;
+}
+/* Coloring */
+
+.card > .Assertion {
+  background: var(--Assertion-color);
+  border: var(--Assertion-color) solid calc(var(--scale) * 0.3vh) !important;
+  border-style: outset !important;
+}
+
+.card > .Aura {
+  background: var(--Aura-color);
+  border: var(--Aura-color) solid calc(var(--scale) * 0.3vh) !important;
+  border-style: outset !important;
+}
+.card > .Ability {
+  background: var(--Ability-color);
+  border: var(--Ability-color) solid calc(var(--scale) * 0.3vh) !important;
+  border-style: outset !important;
+}
+
+.blue,
+.blue .tag.spell::before {
+  background: var(--blue-color);
+}
+.green,
+.green .tag.spell::before {
+  background: var(--green-color);
+}
+
+.purple,
+.purple .tag.spell::before {
+  background: var(--purple-color);
+}
+
+.red,
+.red .tag.spell::before {
+  background: var(--red-color);
+}
+.renderedCard {
+  display: flex;
+}
+
+/* Regular Card */
+
+.card {
+  position: relative;
+  display: block;
+  border: #000 solid;
+  height: calc(var(--scale) * 44vh);
+  width: calc(var(--scale) * 31.5vh);
+  padding: calc(var(--scale) * 1vh);
+  border-width: calc(var(--scale) * 1.3vh);
+  border-radius: calc(var(--scale) * 1.2vh);
+  box-shadow: inset 0vh 0.6vh 6vh calc(var(--scale) * -0.3vh) rgba(0, 0, 0, 0.5);
+}
+
+.card p {
+  text-shadow: 0vh 0vh 0.2vh rgba(119, 119, 119, 0.33);
+  font-size: calc(var(--scale) * 2vh);
+}
+
+.card .name,
+.card .health,
+.card .soulcost,
+.attackname,
+.attackdamage,
+.slot1text,
+.attacktext,
+.spelltag,
+.enchantmenttag {
+  border-style: outset;
+  border-color: silver;
+  background-color: silver;
+  border-width: calc(var(--scale) * 0.4vh);
+  box-shadow: inset 1vh 1vh 1.7vh 0vh rgba(0, 0, 0, 0.11);
+}
+
+.card .name {
+  margin-top: calc(var(--scale) * -0.2vh);
+  border-radius: calc(var(--scale) * 0.6vh);
+  padding-left: calc(var(--scale) * 0.3vh);
+  height: calc(var(--scale) * 3vh);
+}
+
+.card .health {
+  float: right;
+  text-align: center;
+  border-radius: calc(var(--scale) * 0.6vh);
+  height: calc(var(--scale) * 2.7vh);
+  width: calc(var(--scale) * 2.9vh);
+  margin-top: calc(var(--scale) * -5vh);
+}
+.card .soulwrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: calc(var(--scale) * 4.2vh);
+  margin-left: calc(var(--scale) * -0.3vh);
+}
+.card .soulcost {
+  float: left;
+  text-align: center;
+  border-radius: calc(var(--scale) * 2vh);
+  height: calc(var(--scale) * 2.2vh);
+  width: calc(var(--scale) * 2.2vh);
+  margin-top: calc(var(--scale) * -1.4vh);
+  background-color: silver;
+  margin-top: calc(var(--scale) * 0.1vh);
+  border-width: calc(var(--scale) * 0.2vh);
+  box-shadow: inset 0vh 0vh 0.5vh 0.1vh black;
+  z-index: 1;
+}
+
+.card .imagebackground {
+  background-size: cover;
+  background-position: center;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  width: calc(var(--scale) * 26vh);
+  height: calc(var(--scale) * 18.7vh);
+  margin-top: calc(var(--scale) * -2vh);
+  margin-left: calc(var(--scale) * 0.5vh);
+  border-style: outset;
+  border-color: silver;
+  border-width: calc(var(--scale) * 0.3vh);
+  background-color: silver;
+}
+
+.card .slot1 {
+  border-radius: calc(var(--scale) * 0.6vh);
+  padding-left: calc(var(--scale) * 0.3vh);
+  height: calc(var(--scale) * 3vh);
+  margin-top: calc(var(--scale) * 18.7vh);
+}
+
+.card .slot1::before {
+  float: right;
+  border-radius: calc(var(--scale) * 0.6vh);
+  font-style: italic;
+  padding-right: calc(var(--scale) * 0.6vh);
+}
+
+.slot1name {
+  padding-right: calc(var(--scale) * 1vh);
+  float: left;
+}
+
+.attackname {
+  border-radius: calc(var(--scale) * 0.6vh);
+  padding-left: calc(var(--scale) * 0.3vh);
+  height: calc(var(--scale) * 3vh);
+  margin-top: calc(var(--scale) * 0vh);
+  border-radius: calc(var(--scale) * 0.4vh);
+}
+
+.attackdamage {
+  border-radius: calc(var(--scale) * 0.6vh);
+  float: right;
+  text-align: center;
+  height: calc(var(--scale) * 2.7vh);
+  width: calc(var(--scale) * 2.9vh);
+  margin-top: calc(var(--scale) * -5vh);
+  padding-left: calc(var(--scale) * 0vh);
+  border-radius: calc(var(--scale) * 0.4vh);
+}
+
+.slot1text,
+.attacktext {
+  height: calc(var(--scale) * 6vh);
+  width: calc(var(--scale) * 26vh);
+  margin-top: calc(var(--scale) * -2vh);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: calc(var(--scale) * 1.3vh) !important;
+  padding: calc(var(--scale) * 0.4vh);
+  padding-top: calc(var(--scale) * 0.2vh);
+  border-radius: calc(var(--scale) * 0.4vh);
+}
+
+.cardnumb {
+  position: absolute;
+  top: calc(var(--scale) * 40.3vh);
+  left: calc(var(--scale) * 0.5vh);
+  font-size: calc(var(--scale) * 1vh);
+  color: grey;
+}
+
+/* Minion Cards */
+
+.minion .cardnumb {
+  margin-top: calc(var(--scale) * -0.1vh);
+}
+
+.minion .attackname,
+.minion .attackdamage,
+.minion .attacktext {
+  display: none;
+}
+.minion .slot1 {
+  margin-top: calc(var(--scale) * 25.3vh);
+}
+
+.minion .slot1text {
+  height: calc(var(--scale) * 8.4vh);
+}
+
+.minion .imagebackground {
+  height: calc(var(--scale) * 25.2vh);
+}
+
+/* Spell Cards */
+.spelltag {
+  display: block;
+  float: right;
+  border-radius: calc(var(--scale) * 0.6vh);
+  height: calc(var(--scale) * 2.8vh);
+  width: calc(var(--scale) * 7vh);
+  margin-top: calc(var(--scale) * -5vh);
+  text-align: center;
+}
+
+.spelltag:before {
+  content: "Spell";
+  width: calc(var(--scale) * 10vh);
+}
+
+.enchantmenttag {
+  display: block;
+  border-radius: calc(var(--scale) * 0.5vh);
+  height: calc(var(--scale) * 2.4vh);
+  width: calc(var(--scale) * 2.4vh);
+  margin-top: calc(var(--scale) * -36vh);
+  left: calc(var(--scale) * 0.6vh);
+  text-align: center;
+  position: absolute;
+  border-width: calc(var(--scale) * 0.2vh);
+}
+
+.enchantmenttag:before {
+  content: "උ";
+  font-size: calc(var(--scale) * 2vh);
+  position: absolute;
+  top: calc(var(--scale) * -0.8vh);
+  left: calc(var(--scale) * 0.25vh);
+}
+.spell .slot1text {
+  height: calc(var(--scale) * 11.5vh);
+  margin-top: calc(var(--scale) * 25vh);
+  border-radius: calc(var(--scale) * 0.6vh);
+  padding: calc(var(--scale) * 1.2vh);
+}
+
+.spell .imagebackground {
+  height: calc(var(--scale) * 25vh);
+}
+
+/* Fullart & Holo cards */
+.fullart {
+  border: silver solid calc(var(--scale) * 1vh);
+  background-size: cover;
+  background-position: center;
+  border-style: groove;
+  z-index: 0;
+}
+
+.fullart.spell .slot1text {
+  margin-top: calc(var(--scale) * 25.5vh);
+}
+.fullart.unit0 .slot1 {
+  margin-top: calc(var(--scale) * 28vh);
+}
+
+.fullart.unit0 .slot1text {
+  height: calc(var(--scale) * 6vh);
+}
+
+.foil.fullart::before,
+.foil > .imagebackground::before {
+  content: "";
+  background-image: url(/assets/sparkles.gif);
+  position: absolute;
+  margin-top: calc(var(--scale) * -1.1vh);
+  margin-left: calc(var(--scale) * -1.1vh);
+  height: calc(var(--scale) * 41.6vh);
+  width: calc(var(--scale) * 29.1vh);
+  opacity: 1;
+  mix-blend-mode: screen;
+}
+
+.foil.fullart::before,
+.holo.fullart::before {
+  z-index: -2;
+}
+
+.blue > .health,
+.blue > .spelltag,
+.blue > .enchantmenttag {
+  background-color: var(--blue-color);
+  color: white;
+}
+
+.green > .health,
+.green > .spelltag,
+.green > .enchantmenttag {
+  background-color: var(--green-color);
+  color: white;
+}
+
+.purple > .health,
+.purple > .spelltag,
+.purple > .enchantmenttag {
+  background-color: var(--purple-color);
+  color: white;
+}
+
+.red > .health,
+.red > .spelltag,
+.red > .enchantmenttag {
+  background-color: var(--red-color);
+  color: white;
+}
+
+.fullart > .imagebackground {
+  visibility: hidden;
+}
+
+.fullart > .Assertion {
+  box-shadow: 0px 0px calc(var(--scale) * 1vh) calc(var(--scale) * 0.3vh)
+    var(--Assertion-color);
+}
+
+.fullart > .Aura {
+  box-shadow: 0px 0px calc(var(--scale) * 1vh) calc(var(--scale) * 0.3vh)
+    var(--Aura-color);
+}
+.fullart > .Ability {
+  box-shadow: 0px 0px calc(var(--scale) * 1vh) calc(var(--scale) * 0.3vh)
+    var(--Ability-color);
+}
+.fullart > .name,
+.fullart > .attacktext,
+.fullart > .attackdamage,
+.fullart > .slot1text,
+.fullart > .attackname {
+  background-color: rgb(0, 0, 0, 0.4);
+  color: white;
+  border-color: rgb(0, 0, 0, 0.1);
+  border-width: calc(var(--scale) * 0.4vh);
+}
+
+.fullart > .spelltag {
+  margin-top: calc(var(--scale) * -4.9vh);
+}
+
+.fullart > .health {
+  margin-top: calc(var(--scale) * -5vh);
+  height: calc(var(--scale) * 3vh);
+}
+
+.fullart > .attackdamage {
+  margin-top: calc(var(--scale) * -5vh);
+  height: calc(var(--scale) * 3vh);
+}
+
+.fullart > .cardnumbers {
+  top: calc(var(--scale) * 40.5vh);
+}

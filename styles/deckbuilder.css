@@ -1,0 +1,36 @@
+.col {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.pool-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: auto;
+  max-height: auto;
+  max-width: 50vw;
+  margin-left: 50vw;
+  gap: 0.4vh;
+}
+.container > * {
+  margin: 0vh;
+}
+
+.deck-container {
+  min-width: 46vw;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: auto;
+  max-height: auto;
+  max-width: 46vw;
+  margin: 2vw;
+}
+
+.menu {
+  margin-top: 10vh;
+}
